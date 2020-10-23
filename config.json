@@ -11,6 +11,7 @@
     "video_download": 0,
     "cookie": "_ga=GA1.2.1565148207.1584455132; SUB=_2A25ylj8WDeRhGeVP6VEV8y_FzjiIHXVueUFerDV6PUJbktAfLWn5kW1NTRiZvWeVypQgMie078dnzgp6Qe2hNhj0; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9Wh3r4y3MIblz6TMXZXdMfVh5NHD95Q0eKz0Shep1K-XWs4DqcjZ9J8VIJLV9svV97tt; SUHB=0IIVmJzv56Svuh; SSOLoginState=1603424070; _T_WM=91378816558; XSRF-TOKEN=1b521f; WEIBOCN_FROM=1110006030; MLOGIN=1; M_WEIBOCN_PARAMS=uicode%3D20000174",
     "mongo_config": {
-        "host": "mongodb://192.168.3.3:27017"
+        "host": "mongodb://192.168.3.3:27017",
+        "db": "data"
     }
 }
