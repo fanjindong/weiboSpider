@@ -8,8 +8,9 @@ logger = logging.getLogger('spider.mongo_writer')
 
 
 class MongoWriter(Writer):
-    def __init__(self):
-        pass
+    def __init__(self, config):
+        self._db = config.pop("db") or "weibo"
+        self._config = config
 
     def _info_to_mongodb(self, collection, info_list):
         """将爬取的信息写入MongoDB数据库"""
@@ -22,8 +23,8 @@ class MongoWriter(Writer):
         try:
             from pymongo import MongoClient
 
-            client = MongoClient()
-            db = client['weibo']
+            client = MongoClient(**self._config)
+            db = client[self._db]
             collection = db[collection]
             new_info_list = copy.deepcopy(info_list)
             for info in new_info_list:
